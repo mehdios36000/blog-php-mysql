@@ -4,8 +4,6 @@ if(isset($_POST["submit"])){
             $nom=strip_tags($_POST["nom"]);
             $prenom=strip_tags($_POST["prenom"]);
             $email=strip_tags($_POST["email"]);
-            $password=$_POST["password"];
-            $password=password_hash($password,PASSWORD_DEFAULT);
             $age=strip_tags($_POST["age"]);
             $ville=strip_tags($_POST["ville"]);
             $date=date("Y-m-d H:i:s");
@@ -29,7 +27,7 @@ if(isset($_POST["submit"])){
     $uploads_dir = '../includes/uploads/profiles';
         #TO move the uploaded file to specific location
         move_uploaded_file($tname, $uploads_dir.'/'.$pname);
-            $commande="UPDATE `utilisateur` SET `nom_utilisateur`='$nom',`prenom_utilisateur`='$prenom',`age`='$age',`ville`='$ville',`email`='$email',`password`='$password',`date_updated`='$date',`description_de_profil`='$description',`sexe`='$sexe',`pname`='$pname',`title_file`='$file',`is_auth`=  $is_auth,`is_admin`=  $is_admin ,is_deleted=$is_deleted WHERE id_utilisateur=$id_utilisateur";
+            $commande="UPDATE `utilisateur` SET `nom_utilisateur`='$nom',`prenom_utilisateur`='$prenom',`age`='$age',`ville`='$ville',`email`='$email',`date_updated`='$date',`description_de_profil`='$description',`sexe`='$sexe',`pname`='$pname',`title_file`='$file',`is_auth`=  $is_auth,`is_admin`=  $is_admin ,is_deleted=$is_deleted WHERE id_utilisateur=$id_utilisateur";
             mysqli_query($con ,$commande) or die(mysqli_error($con));
             header("Location:edit_success.php");
             }
