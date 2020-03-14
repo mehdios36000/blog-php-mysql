@@ -100,8 +100,8 @@ include "../includes/config.php";
                 <label class="col-md-3 control-label">restore account</label>
                 <div class="col-md-8">
                   <select  class="form-control form-control-lg" name="restore">
-                    <option value="1">oui</option>
-                    <option value="0">non</option>
+                    <option value="0">oui</option>
+                    <option value="1">non</option>
                   </select>
                 </div>
               </div>
