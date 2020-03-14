@@ -114,11 +114,6 @@ include "../includes/config.php";
                   </select>
                 </div>
               </div>
-              <div class="form-group">
-                <label class="col-md-3 control-label">mot de passe</label>
-                <div class="col-md-8">
-                  <input class="form-control" name="password" type="password" required>
-                </div>
               </div>
               <div class="form-group">
                 <label class="col-md-3 control-label"></label>
